@@ -17,6 +17,6 @@ class Dagger2MVVMApp : Application() {
         super.onCreate()
 
         mInstance = this
-        applicationComponent = DaggerApplicationComponent.create()
+        applicationComponent = DaggerApplicationComponent.factory().create(this)
     }
 }
